@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Project tracking intro component</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="lg:max-w-6xl lg:mx-auto mx-8">
+      <div class="absolute right-0 top-0">
+        <div
+          class="bg-[hsl(207,33%,95%)] w-[200px] md:w-[400px] lg:w-[700px] h-[400px] rounded-bl-[50px]"
+        ></div>
+      </div>
+      <section class="relative">
+        <div class="flex justify-between lg:pt-14 pt-7">
+          <img src="images/logo.svg" alt="" />
+          <div class="hidden lg:block">
+            <ul
+              class="flex space-x-10 font-[Barlow_Condensed] font-bold text-[hsl(230,29%,20%)] uppercase"
+            >
+              <li class="hover:underline cursor-pointer">Product</li>
+              <li class="hover:underline cursor-pointer">Features</li>
+              <li class="hover:underline cursor-pointer">Pricing</li>
+              <li class="text-[hsl(230,29%,20%)]/50">•</li>
+              <li
+                class="text-[hsl(230,29%,20%)]/50 hover:underline cursor-pointer"
+              >
+                Login
+              </li>
+            </ul>
+          </div>
+          <div class="lg:hidden">
+            <img id="hamburger" onclick="toggleNav()" src="images/icon-hamburger.svg" alt="" class="cursor-pointer block" />
+            <img id="closeIcon" onclick="toggleNav()" src="images/icon-close.svg" alt="" class="cursor-pointer hidden" >
+          </div>
+        </div>
+        <!--  -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:mt-20 mt-14"
+        >
+          <div class="order-2 lg:order-1 mt-10 lg:mt-0">
+            <p
+              class="font-[Barlow_Condensed] uppercase tracking-[4px] text-[hsl(230,29%,20%)]/30 text-base lg:text-lg"
+            >
+              <span
+                class="bg-[hsl(230,29%,20%)] text-white rounded-full px-3 font-bold py-1 tracking-normal mr-2"
+                >New</span
+              >
+              Monograph Dashboard
+            </p>
+            <h1
+              class="font-[Barlow_Condensed] uppercase text-[40px]/10 lg:text-7xl font-bold text-[hsl(230,29%,20%)] py-5"
+            >
+              Powerful insights into your team
+            </h1>
+            <p class="font-[Barlow] text-[hsl(230,29%,20%)]/60 lg:text-lg">
+              Project planning and time tracking <br />
+              for agile teams
+            </p>
+            <p
+              class="font-[Barlow_Condensed] uppercase lg:mt-20 mt-10 tracking-[2px] lg:tracking-[4px] text-[hsl(230,29%,20%)]/30 lg:text-lg"
+            >
+              <span
+                class="bg-[hsl(0,100%,68%)] text-white px-6 py-2.5 rounded font-bold tracking-normal mr-3 cursor-pointer"
+                >Schedule a demo</span
+              >
+              to see a preview
+            </p>
+          </div>
+          <div
+            class="overflow-hidden xl:-mr-[144px] md:-mr-0 -mr-8 order-1 lg:order-2"
+          >
+            <div class="lg:-mr-[450px] md:-mr-0 -mr-[130px]">
+              <img src="images/illustration-devices.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <footer class="mt-5">
+          <p class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+          </p>
+        </footer>
+      </section>
+    </main>
+ <section class="hidden" id="mobileMenu">
+     <div class="fixed inset-0 top-24">
+      <div class="bg-white  rounded p-5 mx-8 [box-shadow:0_5px_10px_rgba(0,0,0,0.2)]">
+        <ul
+          class="space-y-4 font-[Barlow_Condensed] font-bold text-[hsl(230,29%,20%)] uppercase text-center text-lg tracking-wider"
+        >
+          <li class="hover:underline cursor-pointer">Product</li>
+          <li class="hover:underline cursor-pointer">Features</li>
+          <li class="hover:underline cursor-pointer">Pricing</li>
+          <hr class="text-[hsl(230,29%,20%)]/10" />
+          <li class="text-[hsl(230,29%,20%)]/30 hover:underline cursor-pointer">
+            Login
+          </li>
+        </ul>
+      </div>
+    </div>
+ </section>
+<script>
+  function toggleNav() {
+    const hamburger = document.getElementById("hamburger");
+    const closeIcon = document.getElementById("closeIcon");
+
+    hamburger.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (mobileMenu) {
+      mobileMenu.classList.toggle("hidden");
+    }
+  }
+</script>
+  </body>
+</html>
